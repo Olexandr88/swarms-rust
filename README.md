@@ -89,17 +89,57 @@ As a twin to the Python and JavaScript libraries, the Rust library will adopt a 
 
 ![Design: Swarms APIs](/assets/design-swarms-apis.png)
 
+
+## Detailed Design
+The detailed design aims to give a standard and spec to implements a Rust-based Swarms framework. The framework enables both centralized and decentralized swarm architectures with blockchain-based identity verification and state tracking. The design details can be accessed in `/design` folder.
+
+### `design/interfaces`
+Core trait definitions and abstractions:
+- `design/interfaces/agent.md`: Agent capabilities and lifecycle
+- `design/interfaces/swarm.md`: Swarm orchestration patterns
+- `design/interfaces/task.md`: Task processing and state management
+- `design/interfaces/models.md`: LLM integration interfaces
+- `design/interfaces/memory.md`: State and context management
+
+### `design/api`
+Integration patterns and protocols:
+- `design/interfaces/agent_communication.md`: Message passing protocols
+- `design/interfaces/swarm_orchestration.md`: Coordination patterns
+- `design/interfaces/model_integration.md`: LLM interaction patterns
+- `design/interfaces/storage_integration.md`: Data persistence patterns
+- `design/interfaces/memory_integration.md`: Context management
+
+### `design/requirements`
+Implementation specifications:
+- `design/interfaces/core_functions.md`: Essential capabilities
+- `design/interfaces/consensus.md`: Agreement protocols
+- `design/interfaces/error_handling.md`: Fault tolerance
+- `design/interfaces/message_passing.md`: Communication patterns
+- `design/interfaces/task_mutability.md`: State management
+- `design/interfaces/blockchain_security.md`: Chain integration
+- `design/interfaces/self_improvement.md`: Autonomous enhancement
+
+### `design/diagrams`
+Architecture visualization:
+- `design/interfaces/component_diagram.md`: System structure
+- `design/interfaces/sequence_diagrams.md`: Interaction flows
+- `design/interfaces/state_diagrams.md`: State transitions
+- `design/interfaces/deployment_diagram.md`: Runtime architecture
+
+
 ----
 ## Development Roadmap
 
 - [x] Highlevel Abstraction
-- [ ] Detailed Design: Finalize the detailed design for BaseAgent, BaseModel, and BaseSwarm.
+- [x] Detailed Design: Finalize the detailed design for BaseAgent, BaseModel, and BaseSwarm.
+- [ ] Create Phase 1 Rust Implementation scope
 - [ ] Rust Implementation on core components: BaseTask, BaseAgent, BaseModel, BaseSwarm
 - [ ] Rust Implementation on Utility modules
 - [ ] Rust Testing: Develop comprehensive test cases based on the Python library.
 - [ ] Rust Examples: Recreate examples from the Python library to demonstrate usage.
 - [ ] Blockchain Integration: Integrate with blockchain wallet SDKs in Rust.
 - [ ] Mind Network Integration: Connect with Mind Network’s SDK to implement agent model consensus.
+- [ ] Swarms Cloud Integration
 
 More todo will be added as project goes. 
 
