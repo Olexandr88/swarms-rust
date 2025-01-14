@@ -1,0 +1,35 @@
+[package]
+name = "swarm_wallet"
+version = "0.1.0"
+edition = "2021"
+description = "wallet traits for the swarms framework"
+license = "MIT"
+
+[dependencies]
+tokio = { workspace = true }
+async-trait = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+uuid = { workspace = true }
+log = { workspace = true }
+env_logger = { workspace = true }
+thiserror = { workspace = true }
+reqwest = { workspace = true }
+dotenv = { workspace = true }
+rand = { workspace = true }
+tempfile = { workspace = true }
+futures = { workspace = true }
+tokio-stream = { workspace = true }
+parking_lot = { workspace = true }
+dashmap = { workspace = true }
+tracing = { workspace = true }
+alloy = { workspace = true}
+alloy-contract = { workspace = true}
+solana-sdk = { workspace = true}
+bs58 = { workspace = true}
+
+[features]
+default = []
+
+[dev-dependencies]
+wiremock = "0.5"
