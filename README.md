@@ -202,6 +202,7 @@ Phase 2 will utilize `swarms-rust` to develop a Bitcoin Price Prediction and Con
 - [x] Highlevel Abstraction
 - [x] Detailed Design: Finalize the detailed design for BaseAgent, BaseModel, and BaseSwarm.
 - [x] Phase 1 Rust Implementation: replicated `swarm_memory`, `swarm_tool`, `swarm_llm`, `swarm_agent`, `swarms`. new added `swarms_wallet`.
+- [x] Phase 1 test coverage completed.
 - [ ] Phase 2 Rust Implementation: Btc Price Prediction and consensus Swarm
 - [ ] Rust Implementation on Utility modules
 - [ ] Rust Testing: Develop comprehensive test cases based on the Python library.
