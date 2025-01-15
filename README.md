@@ -147,6 +147,29 @@ The Phase 1 implementation focuses on aligning with the functionality available 
 - **Testing Coverage**: Test code is provided in each crate, and you can run `cargo test --workspace` to execute all test cases.
 - **LLM vs. Non-LLM models**: A dedicated crate for LLM is created. While swarms-py refers to models collectively, it would be better to separate LLM models from non-LLM models. LLMs could serve as control and decison making (e.g., LLM-as-judge), while other models, such as ML models, could focus on specific tasks.
 
+#### Testcase coverages
+```shell
+$ cargo test --workspace
+...
+test mock::tests::test_mock_response_generation ... ok
+test mock::tests::test_mock_llm_patterns ... ok
+test openai::test_mock_response_generation ... ok
+test openai::test_openai_client_creation_without_env ... ok
+test chromadb::test_chromadb_errors ... ok
+test chromadb::test_chromadb_store ... ok
+test pinecone::test_pinecone_errors ... ok
+test pinecone::test_pinecone_store ... ok
+test solana::tests::test_solana_wallet_creation ... ok
+test solana::tests::test_solana_wallet_signing ... ok
+test evm::tests::test_evm_wallet_creation ... ok
+test solana::tests::test_solana_wallet_signing_verify ... ok
+test evm::tests::test_evm_wallet_signing ... ok
+test evm::tests::test_evm_wallet_signing_verify ... ok
+test mock::test_swarm_agent_management ... ok
+test mock::test_base_swarm ... ok
+...
+```
+
 ## Phase 2 Implementation
 Phase 2 will utilize `swarms-rust` to develop a Bitcoin Price Prediction and Consensus Swarm.
 
