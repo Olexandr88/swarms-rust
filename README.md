@@ -145,7 +145,7 @@ The Phase 1 implementation focuses on aligning with the functionality available 
 #### Notes: 
 - **Web3 Wallet Support**: Both **EVM** and **Solana** wallets are now supported in swarms-rust.
 - **Testing Coverage**: Test code is provided in each crate, and you can run `cargo test --workspace` to execute all test cases.
--- **LLM Crate**: A dedicated crate for LLM is created. While swarms-py refers to models collectively, it would be better to separate LLM models from non-LLM models. LLMs could serve as control and decison making (e.g., LLM-as-judge), while other models, such as ML models, could focus on specific tasks.
+- **LLM vs. Non-LLM models**: A dedicated crate for LLM is created. While swarms-py refers to models collectively, it would be better to separate LLM models from non-LLM models. LLMs could serve as control and decison making (e.g., LLM-as-judge), while other models, such as ML models, could focus on specific tasks.
 
 ## Phase 2 Implementation
 Phase 2 will utilize `swarms-rust` to develop a Bitcoin Price Prediction and Consensus Swarm.
