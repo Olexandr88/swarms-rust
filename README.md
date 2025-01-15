@@ -90,6 +90,7 @@ As a twin to the Python and JavaScript libraries, the Rust library will adopt a 
 ![Design: Swarms APIs](/assets/design-swarms-apis.png)
 
 
+----
 ## Detailed Design
 The detailed design aims to give a standard and spec to implements a Rust-based Swarms framework. The framework enables both centralized and decentralized swarm architectures with blockchain-based identity verification and state tracking. The design details can be accessed in `/design` folder.
 
@@ -128,12 +129,34 @@ Architecture visualization:
 
 
 ----
+## Phase 1 Implementation
+The Phase 1 implementation focuses on aligning with the functionality available in swarms-py and integrating blockchain functionality in preparation for the next phase of consensus implementation.
+
+### mapping between `swarms-rust` and `swarms-py`:
+| module | `swarms-rust` | `swarms-py` |
+| ---- | ---- | ---- | 
+| `swarm_memory` | Implemented and available in [crate](/swarm_memory/) | Implemented and avaialble in [pypi](https://pypi.org/project/swarms-memory/) |
+| `swarm_tool` | Implemented and available in [crate](/swarm_tool/) | Implemented and avaialble by giving [examples](https://docs.swarms.world/en/latest/swarms/tools/main/) |
+| `swarm_llm` | Implemented and available in [crate](/swarm_llm/) | Implemented and avaialble by [pypi](https://pypi.org/project/swarm-models/) |
+| `swarm_wallet` | Implemented and available in [crate](/swarm_wallet/) | not available |
+| `swarm_agent` | Implemented and available in [crate](/swarm_agent/) | part of `swarms` pypi |
+| `swarms` | Implemented and available in [crate](/swarms/) | Implemented and avaialble  in [pypi](https://pypi.org/project/swarms/) |
+
+#### Notes: 
+- **Web3 Wallet Support**: Both **EVM** and **Solana** wallets are now supported in swarms-rust.
+- **Testing Coverage**: Test code is provided in each crate, and you can run `cargo test --workspace` to execute all test cases.
+-- **LLM Crate**: A dedicated crate for LLM is created. While swarms-py refers to models collectively, it would be better to separate LLM models from non-LLM models. LLMs could serve as control and decison making (e.g., LLM-as-judge), while other models, such as ML models, could focus on specific tasks.
+
+## Phase 2 Implementation
+Phase 2 will utilize `swarms-rust` to develop a Bitcoin Price Prediction and Consensus Swarm.
+
+----
 ## Development Roadmap
 
 - [x] Highlevel Abstraction
 - [x] Detailed Design: Finalize the detailed design for BaseAgent, BaseModel, and BaseSwarm.
-- [ ] Create Phase 1 Rust Implementation scope
-- [ ] Rust Implementation on core components: BaseTask, BaseAgent, BaseModel, BaseSwarm
+- [x] Phase 1 Rust Implementation: replicated `swarm_memory`, `swarm_tool`, `swarm_llm`, `swarm_agent`, `swarms`. new added `swarms_wallet`.
+- [ ] Phase 2 Rust Implementation: Btc Price Prediction and consensus Swarm
 - [ ] Rust Implementation on Utility modules
 - [ ] Rust Testing: Develop comprehensive test cases based on the Python library.
 - [ ] Rust Examples: Recreate examples from the Python library to demonstrate usage.
