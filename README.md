@@ -167,6 +167,29 @@ test evm::tests::test_evm_wallet_signing ... ok
 test evm::tests::test_evm_wallet_signing_verify ... ok
 test mock::test_swarm_agent_management ... ok
 test mock::test_base_swarm ... ok
+test architectures::graph_swarm::tests::test_graph_swarm_empty_input ... ok
+test architectures::graph_swarm::tests::test_graph_swarm_invalid_adjacency ... ok
+test architectures::grid::tests::test_grid_swarm_invalid_size ... ok
+test architectures::circular::tests::test_circular_swarm ... ok
+test architectures::fibonacci::tests::test_fibonacci_swarm ... ok
+test architectures::geometric::tests::test_geometric_swarm ... ok
+test architectures::linear::tests::test_linear_swarm ... ok
+test architectures::mesh::tests::test_mesh_swarm ... ok
+test architectures::grid::tests::test_grid_swarm ... ok
+test architectures::queue_swarm::tests::test_queue_swarm_empty_input ... ok
+test architectures::harmonic::tests::test_harmonic_swarm ... ok
+test architectures::graph_swarm::tests::test_graph_swarm ... ok
+test architectures::round_robin::tests::test_round_robin_empty_input ... ok
+test architectures::queue_swarm::tests::test_queue_swarm ... ok
+test architectures::pyramid::tests::test_pyramid_swarm ... ok
+test architectures::tree_swarm::tests::test_tree_swarm_empty_input ... ok
+test architectures::tree_swarm::tests::test_tree_swarm_invalid_relationships ... ok
+test architectures::round_robin::tests::test_round_robin_swarm ... ok
+test architectures::star::tests::test_star_swarm ... ok
+test architectures::prime::tests::test_prime_swarm ... ok
+test architectures::tree_swarm::tests::test_tree_swarm ... ok
+test architectures::patterns::tests::test_pattern_swarms ... ok
+
 ...
 ```
 
