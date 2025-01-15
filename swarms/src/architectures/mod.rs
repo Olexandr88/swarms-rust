@@ -1,1 +1,15 @@
 pub mod linear;
+pub mod circular;
+pub mod fibonacci;
+pub mod geometric;
+pub mod graph_swarm;
+pub mod grid;
+pub mod harmonic;
+pub mod mesh;
+pub mod patterns;
+pub mod prime;
+pub mod pyramid;
+pub mod queue_swarm;
+pub mod round_robin;
+pub mod star;
+pub mod tree_swarm;
