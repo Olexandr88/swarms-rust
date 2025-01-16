@@ -1,0 +1,40 @@
+[package]
+name = "demo_btc_prediction_consensus_swarm"
+version = "0.1.0"
+edition = "2021"
+description = "BTC Prediction and Consensus Swarms"
+license = "MIT"
+
+[dependencies]
+swarm_tool = { path = "../swarm_tool" }
+swarm_llm = { path = "../swarm_llm" }
+swarm_wallet = { path = "../swarm_wallet" }
+swarm_memory = { path = "../swarm_memory" }
+swarm_agent = { path = "../swarm_agent" }
+swarms = { path = "../swarms" }
+tokio = { workspace = true }
+async-trait = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+uuid = { workspace = true }
+log = { workspace = true }
+env_logger = { workspace = true }
+thiserror = { workspace = true }
+reqwest = { workspace = true }
+dotenv = { workspace = true }
+rand = { workspace = true }
+tempfile = { workspace = true }
+futures = { workspace = true }
+tokio-stream = { workspace = true }
+parking_lot = { workspace = true }
+dashmap = { workspace = true }
+tracing = { workspace = true }
+rusqlite = { workspace = true}
+chrono = { workspace = true }
+yahoo_finance_api = { workspace = true }
+
+[features]
+default = []
+
+[dev-dependencies]
+wiremock = "0.5"
