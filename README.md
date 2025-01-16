@@ -194,7 +194,34 @@ test architectures::patterns::tests::test_pattern_swarms ... ok
 ```
 
 ## Phase 2 Implementation
-Phase 2 will utilize `swarms-rust` to develop a Bitcoin Price Prediction and Consensus Swarm.
+Phase 2 will utilize `swarms-rust` to develop a Bitcoin Price Prediction and Consensus Swarm in `/demo_btc_prediction_consensus_swarm`.
+- Tools: 
+  - coingeko
+  - yahoo_finance
+- Agents:
+  - stastical model agent as embeded code
+  - machine learning agent as a service
+  - openai llm based agent as a service
+- swarms:
+- dockers: 
+
+#### Testcase coverages
+```shell
+$ cargo test -p demo_btc_prediction_consensus_swarm
+...
+test agents::btc_price_statistical_predictor::tests::test_statistical_predictor_basic ... ok
+test agents::btc_price_statistical_predictor::tests::test_statistical_predictor_validation ... ok
+test tools::yahoo_finance::tests::test_yahoo_finance_tool_validation ... ok
+test tools::yahoo_finance::tests::test_yahoo_finance_tool_schema ... ok
+test tools::coingecko::test::test_coingecko_api_tool ... ok
+test agents::btc_price_ml_predictor::test::test_ml_predictor_validation ... ok
+test agents::btc_price_ml_predictor::test::test_ml_predictor_basic ... ok
+test agents::btc_price_ml_predictor::test::test_ml_predictor_health_check ... ok
+test tools::coingecko::test::test_coingecko_api_tool_run_mock ... ok
+test tools::coingecko::test::test_coingecko_api_tool_run ... ok
+
+...
+```
 
 ----
 ## Development Roadmap
@@ -204,6 +231,11 @@ Phase 2 will utilize `swarms-rust` to develop a Bitcoin Price Prediction and Con
 - [x] Phase 1 Rust Implementation: replicated `swarm_memory`, `swarm_tool`, `swarm_llm`, `swarm_agent`, `swarms`. new added `swarms_wallet`.
 - [x] Phase 1 test coverage completed.
 - [ ] Phase 2 Rust Implementation: Btc Price Prediction and consensus Swarm
+  - [x] tools: coingeko, yahoo_finance
+  - [x] agents: stastical model agent as embeded code, machine learning agent as a service
+  - [ ] agents: openai llm based agent as a service
+  - [ ] swarms: 
+  - [ ] docker:
 - [ ] Rust Implementation on Utility modules
 - [ ] Rust Testing: Develop comprehensive test cases based on the Python library.
 - [ ] Rust Examples: Recreate examples from the Python library to demonstrate usage.
