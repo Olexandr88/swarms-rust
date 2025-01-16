@@ -9,9 +9,7 @@ pub trait Tool: Send + Sync + Debug{
     fn name(&self) -> &str;
     fn description(&self) -> &str;
     /// Get the tool's schema for input validation
-    fn schema(&self) -> Option<&ToolSchema> {
-        None
-    }
+    fn schema(&self) -> &ToolSchema;
 }
 
 /// Schema for tool input validation
@@ -32,7 +30,7 @@ pub struct ToolParameter {
 }
 
 /// Supported parameter types
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "lowercase")]
 pub enum ParameterType {
     String,

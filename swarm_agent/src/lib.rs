@@ -65,4 +65,5 @@ impl Default for AgentConfig {
     }
 }
 
+pub mod service;
 pub mod mock;
