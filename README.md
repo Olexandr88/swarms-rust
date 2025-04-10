@@ -1,3 +1,6 @@
+[![Discord](https://img.shields.io/discord/999382051935506503?label=swarms%20Discord&logo=discord)](https://discord.com/invite/jM3Z6M9uMq)
+[![Twitter](https://img.shields.io/twitter/follow/swarms_corp)](https://x.com/swarms_corp)
+
 # swarms-rust
 Rust SDK and CLI for Swarm Framework with Multi-Agent Orchestration
 
